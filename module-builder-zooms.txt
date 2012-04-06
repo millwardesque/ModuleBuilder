@@ -1,0 +1,53 @@
+- Base Entity:
+  - Type
+  - Subtype
+  - Name
+  - Parent
+  - Children
+  - OnRender(context)
+    - Focus:
+      - Children grouped (by Code.SubType) in Preview mode
+    - Preview:
+      - Type : SubType : Label
+  - OnSwitch
+    - Horizontal: Focus to next sibling
+  - OnZoomOut
+    - Focus on parent
+  - OnZoomIn
+    - Focus on selected child
+
+- Code:
+  - Type: "code"
+  - Subtype: Subclasses ("entity, field, form, code")
+  - Name: Subtype name
+  - Parent should be File
+  - Children should be empty
+  - OnRender(context)
+    - Focus:
+      - Edit form for code
+    - Preview:
+      - Uneditable code
+  - OnZoomIn
+    - None
+
+- File: 
+  - Type: "file"
+  - Subtype: Subclasses ("module, install, info")
+  - Name: Filename
+  - Parent should be FileContainer
+  - Children should be Code
+  - OnRender(context)
+    - Preview:
+      - List of code block labels
+
+- FileContainer:
+  - Type: "filecontainer"
+  - Subtype: Subclasses ("module, folder")
+  - Name: Container name 
+  - Parent should be root
+  - Children should be File
+  - OnRender(context)
+    - Preview:
+      - List of Filenames
+  - OnZoomOut
+    - None

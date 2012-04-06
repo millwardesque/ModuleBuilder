@@ -1,0 +1,32 @@
+body {
+  color:#ffffff;
+  background:#121212;
+  font-size: 0.866em;
+}
+
+.main .application {
+  height: 100%;
+  width: 100%;
+  font-size: 1.0em;
+}
+
+.entity {
+  width: 98%;
+  border: 2px solid #efefef;
+  padding: 1%;
+  font-size: 1.0em;
+}
+
+.entity p {
+  margin-top: 0;
+}
+
+.entity-actions a {
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.entity-actions span {
+  color: #aaaaaa;
+  margin-right: 10px;
+}
